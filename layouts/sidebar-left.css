@@ -1,0 +1,32 @@
+#wrapper {
+	max-width: 1140px;
+	margin: 30px auto 15px;
+	overflow: hidden;
+	background: white;
+}
+#sidebar {
+	width: 25%;
+	max-width: 285px;
+	margin-top: 10px;
+	float: left;
+	clear: left;
+	background: white;
+}
+#content {
+	width: 75%;
+	margin: 10px 0 30px 25%;
+	overflow: hidden;
+	background: white;
+}
+#footer {
+	width: 100%;
+	clear: both;
+	overflow: hidden;
+}
+#logo-head {
+	width: 100%;
+}
+.post {
+	padding: 0 3%;
+	margin-bottom: 30px;
+}
