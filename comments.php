@@ -5,6 +5,10 @@
  * @package Tuesday
  * @since Tuesday 1.0
  */
+
+// Using twentytwelve solution for not showing comments if the post is protected, and password is not provided. 
+if ( post_password_required() )
+	return;
 ?>
 	<section id="comments">
 	<?php if ( have_comments() ) : ?>
@@ -30,7 +34,7 @@
 	<?php comment_form(array(
 		'id_form' => 'comment-form',
 		'fields' => array(
-			'author' => '<p class="comment-form-author"><label class="form-label" for="author">' . __( 'Name', 'tuesday' ) . '' . ( $req ? '<span class="required">*</span>' : '' ) . '</label><input class="form-input" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' required/></p>',
+			'author' => '<p class="comment-form-author"><label class="form-label" for="author">' . __( 'Name', 'tuesday' ) . '' . ( $req ? '<span class="required">*</span>' : '' ) . '</label><input class="form-input" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" required/></p>',
 			'email' => '<p class="comment-form-email"><label class="form-label" for="email">' . __( 'Email', 'tuesday' ) . '</label><input class="form-input" id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"/></p>',
 			'url' => '<p class="comment-form-url"><label class="form-label" for="url">' . __( 'Website', 'tuesday' ) . '</label><input class="form-input" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p>'
 		),

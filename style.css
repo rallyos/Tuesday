@@ -4,7 +4,7 @@ Theme URI: http://tuesday.dimitarralev.net
 Author: Dimitar Ralev
 Author URI: http://dimitarralev.net
 Description: Tuesday is responsive and customizable theme. It's inspired from minimal and flat design. Choose between three available layouts and add blog logo. The theme allows you to control your typography. With font settings you can choose the font you like from Google Web Fonts, and use it instantly on your blog. Tuesday supports header images and background settings.The theme also adds two new widgets, and it's optimized for phones and tablets.
-Version: 1.0
+Version: 1.0.1
 License: GNU General Public License
 License URI: license.txt
 Tags: white, red, one-column, two-columns, left-sidebar, right-sidebar, flexible-width, custom-background, custom-header, custom-menu, featured-images, flexible-header, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
@@ -357,6 +357,7 @@ a {
 .post-title {
 	font-weight: 300;
 	font-size: 1.8rem;
+	word-wrap: break-word;
 }
 .post-title-permalink:hover {
 	color: #E47878;

@@ -22,7 +22,12 @@
 		<?php if ( has_post_thumbnail() ) : ?>
 			<?php the_post_thumbnail(); ?>
 		<?php endif; ?>
-		<?php the_content( __( 'Continue reading &rarr;', 'tuesday' ) ); ?>
+		<?php if ( has_excerpt() ) : ?>
+			<?php the_excerpt(); ?>
+			<a class="more-link" href="<?php echo get_permalink(); ?>">Continue reading &rarr;</a>
+		<?php else: ?> 
+			<?php the_content( __( 'Continue reading &rarr;', 'tuesday' ) ); ?>
+		<?php endif; ?>
 	</section>
 	<footer class="post-footer">
 		<div class="category-comment">
