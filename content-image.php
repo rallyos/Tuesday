@@ -9,7 +9,7 @@
 <article id="post-<?php the_ID();?>" <?php post_class(); ?>>
 	<header>
 		<hgroup>
-			<h1 class="post-title"><?php the_title(); ?></h1>
+			<?php the_title('<h1 class="post-title">','</h1>'); ?>
 			<h6 class="post-time"><?php tuesday_posted_on(); ?></h6>
 		</hgroup>	
 	</header>

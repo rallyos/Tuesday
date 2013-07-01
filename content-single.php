@@ -10,11 +10,14 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="post-header">
 			<hgroup>
-				<h1 class="post-title"><?php the_title(); ?></h1>
+				<?php the_title('<h1 class="post-title">','</h1>'); ?>
 				<h6 class="post-time"><?php tuesday_posted_on(); ?></h6>
 			</hgroup>			
 		</header>
 	<section class="post-content">
+		<?php if ( has_post_thumbnail() ) : ?>
+			<?php the_post_thumbnail(); ?>
+		<?php endif; ?>
 		<?php the_content(); ?>
 	</section>
 	<footer class="post-footer">
